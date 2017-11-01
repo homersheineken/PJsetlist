@@ -82,7 +82,7 @@ a {
     padding: 10px;
 }
 
-.artists_list h4 {
+.artists_list h4, .by_years h4 {
     text-align: center;
     font-size: 30px;
     font-weight: 100;
@@ -91,7 +91,26 @@ a {
     text-transform: lowercase;
 }
 
-
+.by_years {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.classYears {
+    display: flex;
+    flex-wrap: wrap;
+}
+.concertYear {
+    margin: 0 10px 10px;
+    font-family: Vitology;
+    display: inline-block;
+    flex-grow: 1;
+    height: 20px;
+    width: calc(100% * (1/8) - 10px - 1px);
+}
+.concertYear:hover {
+    cursor: pointer;
+}
 
 /* =======================================
                     HEADER
@@ -211,6 +230,7 @@ span.info {
 }
 li.song_name  {
     font-family:'Permanent Marker', cursive;
+    max-width: 500px;
 }
 h3 {
     font-size: 20px;
@@ -238,3 +258,16 @@ ol li {
     list-style-type: none;
 }
 ol li:before { content: counter(mycounter) ". "; }
+/*=============SONG============
+=================================*/
+.song {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.song li {
+    font-family: 'Permanent Marker', cursive;
+    list-style-type: none;
+}
+.song h3 {
+    font-size: 36px;
+}

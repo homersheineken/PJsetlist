@@ -8,6 +8,7 @@ import Concert from './components/concert';
 import Song from './components/song';
 import RefreshData from './components/refreshdata'
 import RefreshSongs from './components/refreshsongs'
+import UpdateDate from './components/updatedate'
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/refreshdata" component={RefreshData}/>
                     <Route exact path="/refreshsongs" component={RefreshSongs}/>
+                    <Route exact path="/updatedate" component={UpdateDate}/>
 
                     <Route path="/concert/:concertid" component={Concert}/>
                     <Route path="/songs/:songid" component={Song}/>

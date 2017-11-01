@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
 import Header from './header'
-const REQ_URL = `http://localhost:3777/songs`
+const REQ_URL = `http://localhost:3780/songs`
 
 class Song extends Component{
     constructor(props) {
@@ -33,9 +33,10 @@ class Song extends Component{
                 dates.map((date,i)=>{
                     var newdate = date
                     return(
-                        <div>
-                            <li key={i}>{date}</li>
-                        </div>
+                        
+                        <Link key={i} to={`/concert/${date}`} className="concert_item" >
+                            <li>{date}</li>
+                        </Link>
                         )
                 })
             )

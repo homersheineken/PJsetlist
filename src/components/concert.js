@@ -4,7 +4,7 @@ import $ from 'jquery';
 import FastHtmlParser from 'fast-html-parser';
 
 import Header from './header'
-const REQ_URL = `http://localhost:3777/concertlist`
+const REQ_URL = `http://localhost:3780/concertlist`
 
 
 class Concert extends Component {
@@ -80,33 +80,40 @@ class Concert extends Component {
                     let link;
                     //let link = (json.items[0].link);
                     if (json.items[0].link == "http://www.pearljambootlegs.org/" ){
-                         link = json.items[1].link
+                         if(json.items[1] && json.items[1].link){
+                            link = json.items[1].link 
+                         } else {
+                            link = undefined
+                         }  
                     } else{
                         link = json.items[0].link
                     }
                     //let link ="http://www.pearljambootlegs.org/modules/jinzora2/index.php?nuCU0sannA%3D%3D=ZpZmmJRlZGhtYZFwYJhlWZCooMvRx7JQq6KWnZiSWaacz5jDzKJgV4CAjViIuXRZlHeMqMI%3D"
                     var show_download;
-                    let callajax = $.ajax({
-                       url:link,
-                       
-                       type:'GET',
-                       success: function(data){
-                           show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');
-                           if(show_download){
-                            show_download = "http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
-                            let html = "Click the Stickman to download show: <a href='" + show_download + "'><img class='aliveguy' src='/images/aliveguy.png' /></a>"
-                            $(".download").html(html)
+                    if (link){
+                        let callajax = $.ajax({
+                           url:link,
+                           
+                           type:'GET',
+                           success: function(data){
+                               show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');
+                               if(show_download){
+                                show_download = "http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
+                                let html = "Click the Stickman to download show: <a href='" + show_download + "'><img class='aliveguy' src='/images/aliveguy.png' /></a>"
+                                $(".download").html(html)
+                               }
+                               
+                               
+                               console.log('show_download',show_download)
+
                            }
-                           
-                           
-                           console.log('show_download',show_download)
 
-                       }
+                        });
+                        this.setState({
+                         show_download:show_download
+                        })
+                    }
 
-                    });
-                    this.setState({
-                     show_download:show_download
-                    })
                     /*fetch(link, {
                         method:'GET',
 
@@ -132,8 +139,8 @@ class Concert extends Component {
                 <Header />
                 <div className="concert">
                     <div className="date">
-                        <h2>{this.renderDate(this.state.concert.eventDate)}</h2>
-                        <div className='tour_name'>{this.state.concert && this.state.concert.tour && this.state.concert.tour.name}</div>
+                        <h2>{this.state.concert.eventDate}</h2>
+                        <div className='tour_name'>Tour Name: {this.state.concert && this.state.concert.tour && this.state.concert.tour.name}</div>
                         <div className="venue">
                         Venue: {this.state.concert && this.state.concert.venue && this.state.concert.venue.name} in {this.state.concert && this.state.concert.venue && this.state.concert.venue.city.name}, {this.state.concert && this.state.concert.venue && this.state.concert.venue.city.state}
                         </div> 

@@ -111,6 +111,9 @@ a {
 .concertYear:hover {
     cursor: pointer;
 }
+.song div {
+    columns: 4;
+}
 
 /* =======================================
                     HEADER

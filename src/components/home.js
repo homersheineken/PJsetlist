@@ -14,8 +14,10 @@ const URL_POST = 'http://localhost:3780/concertlist'
 //*************NEED TO CREATE JSON FILE OF CONCERT POSTERS AND YOUTUBE VIDEOS 
 //https://developers.google.com/youtube/v3/code_samples/javascript#search_by_keyword 
 //https://www.codecademy.com/courses/javascript-intermediate-en-757J2/0/5& DOWNLOADS?*******/
-//*************NEED TO CREATE SORT BY YEAR OR PAGINATION BY YEAR https://codepen.io/PiotrBerebecki/pen/pEYPbY  ********///
+//ADD LYRICS DYANMICALLY TO SONG PAGE??
 
+
+//DONE!!!!*************NEED TO CREATE SORT BY YEAR OR PAGINATION BY YEAR https://codepen.io/PiotrBerebecki/pen/pEYPbY  ********///
 /*DONE!!!!!*************NEED TO CREATE JSON FILE OF SONGS PULLED FROM CONCERT DATA************************/
 //DONE!!!!!*************ADD DOWNLOAD LINK FOR THE SHOW****************************************************/
 // can search 2016-08-20 site:www.pearljambootlegs.org  google_API_Key=AIzaSyCl1YUqEje5lhdWmig_4tKov0inoHG5-lE

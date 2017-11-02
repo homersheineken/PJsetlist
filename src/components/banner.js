@@ -5,7 +5,7 @@ const Banner = () => {
     return(
             <div className="banner">
                 <div className="main_cover">
-                    <div className="logo">Pearl Jam Concerts</div>
+                    <div className="logo">Pearl Jam Setlists</div>
                 </div>
                 <span></span>
             </div>

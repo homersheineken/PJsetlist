@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
             <header>
-                <Link to="/">Pearl Jam Concerts</Link>
+                <Link to="/">Pearl Jam Setlists</Link>
             </header>
         )
 }

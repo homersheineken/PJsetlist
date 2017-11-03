@@ -101,7 +101,7 @@ class Concert extends Component {
                            success: function(data){
                                show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');
                                if(show_download){
-                                show_download = " https://cors-anywhere.herokuapp.com/http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
+                                show_download = "http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
                                 let html = "Click the Stickman to download show: <a href='" + show_download + "'><img class='aliveguy' src='/images/aliveguy.png' /></a>"
                                 $(".download").html(html)
                                }

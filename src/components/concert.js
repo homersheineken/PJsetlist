@@ -4,7 +4,7 @@ import $ from 'jquery';
 import FastHtmlParser from 'fast-html-parser';
 
 import Header from './header'
-const REQ_URL = `http://localhost:3780/concertlist`
+const REQ_URL = `http://31.220.54.110:3780/concertlist`
 
 
 class Concert extends Component {
@@ -105,10 +105,6 @@ class Concert extends Component {
                                 let html = "Click the Stickman to download show: <a href='" + show_download + "'><img class='aliveguy' src='/images/aliveguy.png' /></a>"
                                 $(".download").html(html)
                                }
-                               
-                               
-                               console.log('show_download',show_download)
-
                            }
 
                         });

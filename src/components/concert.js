@@ -81,24 +81,27 @@ class Concert extends Component {
                     //let link = (json.items[0].link);
                     if (json.items[0].link == "http://www.pearljambootlegs.org/" ){
                          if(json.items[1] && json.items[1].link){
-                            link = json.items[1].link 
+                            link = 'https://cors-anywhere.herokuapp.com/' + json.items[1].link 
                          } else {
                             link = undefined
                          }  
                     } else{
-                        link = json.items[0].link
+                        link = 'https://cors-anywhere.herokuapp.com/' + json.items[0].link
                     }
                     //let link ="http://www.pearljambootlegs.org/modules/jinzora2/index.php?nuCU0sannA%3D%3D=ZpZmmJRlZGhtYZFwYJhlWZCooMvRx7JQq6KWnZiSWaacz5jDzKJgV4CAjViIuXRZlHeMqMI%3D"
                     var show_download;
                     if (link){
                         let callajax = $.ajax({
                            url:link,
-                           
+                           mode: 'cors',
+                           headers:{
+                           'Access-Control-Allow-Origin':'*'
+                           },
                            type:'GET',
                            success: function(data){
                                show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');
                                if(show_download){
-                                show_download = "http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
+                                show_download = " https://cors-anywhere.herokuapp.com/http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
                                 let html = "Click the Stickman to download show: <a href='" + show_download + "'><img class='aliveguy' src='/images/aliveguy.png' /></a>"
                                 $(".download").html(html)
                                }

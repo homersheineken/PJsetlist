@@ -275,3 +275,20 @@ ol li:before { content: counter(mycounter) ". "; }
 .song h3 {
     font-size: 36px;
 }
+/*===========RESPONSIVE=========*/
+@media(max-width:400px){
+    .banner .logo{
+        height:0px;
+        font-size:22px;
+    }
+    .artists_list h4, .by_years h4{
+        font-size:22px;
+    }
+    .song li {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+    header {
+        font-size: 24px;
+    }
+}

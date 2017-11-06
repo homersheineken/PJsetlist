@@ -200,7 +200,6 @@ a.concert_item {
 =================================*/
 .date h2 {
     display: block;
-    font-size: 1.25em;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     -webkit-margin-start: 0px;
@@ -226,7 +225,7 @@ a.concert_item {
     font-family: vitology;
     font-family: 'Permanent Marker', cursive;
     text-align: center;
-    font-size: 28px !important;
+    font-size: 28px;
 }
 span.info {
     font-size: 10px;
@@ -276,7 +275,7 @@ ol li:before { content: counter(mycounter) ". "; }
     font-size: 36px;
 }
 /*===========RESPONSIVE=========*/
-@media(max-width:400px){
+@media  (max-width:568px){
     .banner .logo{
         height:0px;
         font-size:22px;
@@ -284,11 +283,26 @@ ol li:before { content: counter(mycounter) ". "; }
     .artists_list h4, .by_years h4{
         font-size:22px;
     }
+    .artists_list a.concert_item {
+        font-size:10px;
+    }
     .song li {
         font-size: 10px;
         margin-bottom: 8px;
     }
-    header {
+    header,.banner .logo {
         font-size: 24px;
     }
+    .setlist {
+        margin-left: 10px;
+        max-width: 350px;
+    }
+    ol.start {
+        max-width: 225px;
+    }
+    .info, .date {
+        max-width: 320px;
+        font-size: 20px;
+    }    
+    
 }

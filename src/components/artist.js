@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './header'
 import AlbumList from './albumList'
 
-const REQ_URL = `http://localhost:3006/artists`;
+const REQ_URL = `http://localhost:3780/artists`;
 
 class Artist extends Component {
 

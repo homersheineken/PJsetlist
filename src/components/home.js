@@ -7,7 +7,7 @@ const ConcertData = require('./data.json');
 
 
 //const URL_V1 = "https://cors-anywhere.herokuapp.com/https://api.setlist.fm/rest/1.0/artist/83b9cbe7-9857-49e2-ab8e-b57b01038103/setlists"; 
-const URL_POST = 'http://31.220.54.110:3780/concertlist'
+const URL_POST = 'http://localhost:3780/concertlist'
 
 
 

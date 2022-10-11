@@ -4,7 +4,7 @@ import $ from 'jquery';
 import FastHtmlParser from 'fast-html-parser';
 
 import Header from './header'
-const REQ_URL = `http://31.220.54.110:3780/concertlist`
+const REQ_URL = `http://localhost:3780/concertlist`
 
 
 class Concert extends Component {
@@ -86,7 +86,7 @@ class Concert extends Component {
                             link = undefined
                          }  
                     } else{
-                        link = 'https://cors-anywhere.herokuapp.com/' + json.items[0].link
+                        link = 'https://cors-anywhere.herokuapp.com/' + json.items[1].link
                     }
                     //let link ="http://www.pearljambootlegs.org/modules/jinzora2/index.php?nuCU0sannA%3D%3D=ZpZmmJRlZGhtYZFwYJhlWZCooMvRx7JQq6KWnZiSWaacz5jDzKJgV4CAjViIuXRZlHeMqMI%3D"
                     var show_download;
@@ -97,6 +97,7 @@ class Concert extends Component {
                            headers:{
                            'Access-Control-Allow-Origin':'*'
                            },
+                           requireHeader: ['origin', 'x-requested-with'],
                            type:'GET',
                            success: function(data){
                                show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');

@@ -3,11 +3,16 @@ import Header from './header'
 
 //POST URL CURRENTLY SET TO TEST.JSON
 const URL_POST = 'http://localhost:3780/concertlist'
+const REQ_URL = `./realdata.json`
 
 class UpdateDate extends Component{
     componentDidMount(){
-        fetch(URL_POST,{
-            method:'GET'
+        fetch(REQ_URL,{
+            method:'GET',
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+               }
         })
         .then(response => response.json())
         .then(json => {

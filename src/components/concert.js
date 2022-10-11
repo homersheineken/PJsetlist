@@ -5,7 +5,6 @@ import FastHtmlParser from 'fast-html-parser';
 
 import Header from './header'
 const REQ_URL = `http://31.220.54.110:3780/concertlist`
-const json_url = '/data.json'
 
 
 class Concert extends Component {
@@ -18,17 +17,14 @@ class Concert extends Component {
         })
     }
     componentDidMount(){
-        var concertid = `${this.props.match.params.concertid}`;
-        fetch(json_url, {
+        var concertid = `${REQ_URL}/${this.props.match.params.concertid}`;
+        fetch(concertid, {
             method: 'GET'
         })
         .then(response => response.json())
         .then(json => {
-            console.log('hi')
-            const concert = json.find(x => x.id === concertid)
-            json = concert
             this.setState({
-                concert: concert,
+                concert:json,
                 show_download:''
             })
         })
@@ -153,7 +149,7 @@ class Concert extends Component {
                     <div className='info'>
                     Info: {this.state.concert && this.state.concert.info}
                     </div>
-                    <div className='download'>{/*this.renderDownload(this.state.concert.eventDate)*/}</div>
+                    <div className='download'>{this.renderDownload(this.state.concert.eventDate)}</div>
                     <div>{this.renderSets(this.state.concert.sets)}</div>
 
                     

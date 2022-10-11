@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
 import Header from './header'
-const REQ_URL = `http://localhost:3780/songs`
-const json_url = '/songs.json'
+const REQ_URL = `http://31.220.54.110:3780/songs`
 
 class Song extends Component{
     constructor(props) {
@@ -15,16 +14,15 @@ class Song extends Component{
     }
 
     componentDidMount(){
-        var songid = `${this.props.match.params.songid}`;
-        fetch(json_url, {
+        var songid = `${REQ_URL}/${this.props.match.params.songid}`;
+        fetch(songid, {
             method: 'GET'
         })
         .then(response => response.json())
         .then(json => {
             console.log(json)
-            const song = json[0].songs.find(x => x.id === songid)
             this.setState({
-                song: song
+                song:json
             })
         })
 

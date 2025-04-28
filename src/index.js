@@ -13,7 +13,7 @@ import UpdateDate from './components/updatedate'
 const App = () => {
 
     return(
-            <BrowserRouter>
+            <BrowserRouter basename='PJsetlist'>
                 <div>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/refreshdata" component={RefreshData}/>

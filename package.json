@@ -22,5 +22,6 @@
   },
   "devDependencies": {
     "json-loader": "^0.5.7"
-  }
+  },
+  "homepage" : "http://homersheineken.github.io/PJsetlist"
 }

@@ -59,7 +59,7 @@ class Home extends Component {
             json.map((show)=>{
                 var dateparts = show.eventDate.split('-')
                 years.push(dateparts[2])
-                
+                return true;
             })
             let uniqueYears = [...new Set(years)]
             this.setState({

@@ -101,6 +101,7 @@ class RefreshData extends Component{
                             })
 
                     }) 
+                    return true;
                 })
             console.log('prefetch ',prefetch)   
             })  

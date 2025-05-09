@@ -27,6 +27,7 @@ class UpdateDate extends Component{
                                     })
 
                             }) 
+                            return true;
             })
             return true;
         })

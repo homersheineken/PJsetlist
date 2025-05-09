@@ -36,9 +36,9 @@ class RefreshSongs extends Component{
                         }else{
                             //var dleteme = allsongs[found].played.push(this.concert)
                         }
-                    
-                    },this)
                     return true;
+                    },this)
+                    
                     
                 },this)
                 return true;

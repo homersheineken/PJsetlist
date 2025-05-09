@@ -81,6 +81,7 @@ class Concert extends Component {
             .then(json => {
                 if (json.items){
                     let link;
+                    var show_download;
                     //let link = (json.items[0].link);
                     if (json.items[0].link === "http://www.pearljambootlegs.org/" ){
                          if(json.items[1] && json.items[1].link){
@@ -103,7 +104,7 @@ class Concert extends Component {
                            requireHeader: ['origin', 'x-requested-with'],
                            type:'GET',
                            success: function(data){
-                               var show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');
+                               show_download = $(data).find('td.jz_main_block_topm a[title]').attr('href');
                                if(show_download){
                                 show_download = "http://www.pearljambootlegs.org/modules/jinzora2/" + show_download
                                 let html = "Click the Stickman to download show: <a href='" + show_download + "'><img class='aliveguy' src='/images/aliveguy.png' /></a>"

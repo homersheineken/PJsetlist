@@ -35,7 +35,7 @@ class RefreshData extends Component{
         })
         .then(response => response.json())
         .then(json => {
-            var data = json;
+            //var data = json;
             const apiPromises = [];
             var pagesRequired = Math.ceil(json.setlists["@total"] / json.setlists["@itemsPerPage"]);
 

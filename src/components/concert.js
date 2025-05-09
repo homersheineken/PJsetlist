@@ -113,6 +113,7 @@ class Concert extends Component {
                            }
 
                         });
+                        console.log(callajax);
                         this.setState({
                          show_download:show_download
                         })

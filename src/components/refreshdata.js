@@ -28,7 +28,7 @@ class RefreshData extends Component{
                 console.log('error', error);
             });*/
         //THE BELOW SCRIPT WORKS TO BRING IN FRESH CONCERT DATA    
-        var data;
+        //var data;
         let fullconcertlist = []
         fetch(URL_ARTISTS3,{
             method:'GET'

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import $ from 'jquery';
-import FastHtmlParser from 'fast-html-parser';
+
 
 import Header from './header'
-const REQ_URL = `http://localhost:3780/concertlist`
+//const REQ_URL = `http://localhost:3780/concertlist`
 const json_url = '/data.json'
 
 
@@ -92,7 +92,7 @@ class Concert extends Component {
                         link = 'https://cors-anywhere.herokuapp.com/' + json.items[1].link
                     }
                     //let link ="http://www.pearljambootlegs.org/modules/jinzora2/index.php?nuCU0sannA%3D%3D=ZpZmmJRlZGhtYZFwYJhlWZCooMvRx7JQq6KWnZiSWaacz5jDzKJgV4CAjViIuXRZlHeMqMI%3D"
-                    var show_download;
+                    //var show_download;
                     if (link){
                         let callajax = $.ajax({
                            url:link,

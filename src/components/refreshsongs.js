@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Banner from '../components/banner';
+//import Banner from '../components/banner';
 
 import Header from './header'
 
@@ -34,7 +34,7 @@ class RefreshSongs extends Component{
                         if(found === -1 ){
                             allsongs.push({id:song.name,cover:coversong,played:[this.concert]})
                         }else{
-                            var dleteme = allsongs[found].played.push(this.concert)
+                            //var dleteme = allsongs[found].played.push(this.concert)
                         }
                     
                     },this)

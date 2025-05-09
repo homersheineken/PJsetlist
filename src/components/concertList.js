@@ -6,8 +6,8 @@ const ConcertList = (props) => {
     const list = ({allConcerts}) => {
         if(allConcerts) {
             return allConcerts.map((item)=>{
-                var options = {  year: 'numeric', month: 'long', day: 'numeric' };
-                var newdate
+                //var options = {  year: 'numeric', month: 'long', day: 'numeric' };
+                //var newdate
                 /*var mydate = item["@eventDate"];
                 mydate = mydate.split('-');
                 var newdate = new Date(mydate[2], mydate[1] - 1, mydate[0]);

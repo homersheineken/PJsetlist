@@ -30,7 +30,7 @@ class RefreshSongs extends Component{
                             coversong = song.cover
                         }
                         var found = allsongs.findIndex(
-                            x => x.id==song.name)
+                            x => x.id===song.name)
                         if(found === -1 ){
                             allsongs.push({id:song.name,cover:coversong,played:[this.concert]})
                         }else{

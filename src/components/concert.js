@@ -40,7 +40,7 @@ class Concert extends Component {
                 return (
                     <div key={index} className='setlist'>
                         <h3 >Set #{index+1}</h3>
-                        <ol className={`${index == 0 ? start : lateron}`}>
+                        <ol className={`${index === 0 ? start : lateron}`}>
                             {item.song.map((name,j) => {
                                 return(
                                     <Link key={name["name"]} to={`/songs/${name["name"]}`} className="concert_item" >
@@ -82,7 +82,7 @@ class Concert extends Component {
                 if (json.items){
                     let link;
                     //let link = (json.items[0].link);
-                    if (json.items[0].link == "http://www.pearljambootlegs.org/" ){
+                    if (json.items[0].link === "http://www.pearljambootlegs.org/" ){
                          if(json.items[1] && json.items[1].link){
                             link = 'https://cors-anywhere.herokuapp.com/' + json.items[1].link 
                          } else {

@@ -38,10 +38,10 @@ class RefreshSongs extends Component{
                         }
                     
                     },this)
-                    return;
+                    return true;
                     
                 },this)
-                return;
+                return true;
         },this)
         //SORT SONGS
         allsongs.sort((a, b) => a.id.localeCompare(b.id));
@@ -62,7 +62,7 @@ class RefreshSongs extends Component{
                 })
 
             }) 
-            return;
+            return true;
         }) 
         return(
             allsongs.map((song)=>{

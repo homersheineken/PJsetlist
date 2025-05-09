@@ -39,7 +39,7 @@ class RefreshSongs extends Component{
                     return true;
                     },this)
                     
-                    
+                    return true;
                 },this)
                 return true;
         },this)
